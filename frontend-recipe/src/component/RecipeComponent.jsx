@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Formik, Form, Field } from 'formik';
 import RecipeMapping from './RecipeMapping';
-
+//Link to backend data
 const UserRecipe = 'NewRecipes';
 
 class RecipeComponent extends Component {
@@ -18,9 +18,6 @@ class RecipeComponent extends Component {
     }
 
     componentDidMount() {
-
-        console.log(this.state.id)
-
         if (this.state.id == -1) {
             return
         }
