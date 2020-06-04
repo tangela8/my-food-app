@@ -18,10 +18,6 @@ class RecipeComponent extends Component {
     }
 
     componentDidMount() {
-        if (this.state.id == -1) {
-            return
-        }
-
         RecipeMapping.retrieveRecipe(UserRecipe, this.state.id)
             .then(response => this.setState({
                 details: response.data.details
@@ -34,7 +30,6 @@ class RecipeComponent extends Component {
         let newFood = {
             id: this.state.id,
             details: values.details,
-            targetDate: values.targetDate
         }
 
         if (this.state.id === -1) {
