@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
+import RecipeRoutes from './component/RecipeRoutes';
 import Axios from "axios";
 import Recipe from "./component/Recipe";
+
 
 function App() {
 
@@ -31,6 +33,7 @@ function App() {
   };
 
   return (
+
     <div className="App">
       <h1>Recipe Search</h1>
       <form onSubmit={onSubmit} className="search-form">
@@ -47,6 +50,9 @@ function App() {
         {recipes !== [] &&
           recipes.map(recipe => <Recipe recipe={recipe} />)}
       </div>
+      <div className="container">
+        <RecipeRoutes />
+    </div>
     </div>
   );
 }

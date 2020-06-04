@@ -4,8 +4,8 @@ import RecipeIngredients from "./RecipeIngredients";
 //this will show the ingredients and allow the user to click on a link for the recipe
 
 const Recipe = ({ recipe }) => {
-  const [show, setShow] = useState(false);
-  const {label, image, url, ingredients} = recipe.recipe;
+const [show, setShow] = useState(false);
+const {label, image, url, ingredients} = recipe.recipe;
 
   return (
     <div className="recipe">
